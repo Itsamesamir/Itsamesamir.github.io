@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/Itsamesamir.github.io/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="/styles/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <html>
 
@@ -6,7 +6,7 @@
   <div class="music">
     <p>Currently playing:<br></p>
     <p id="currentlyPlaying">Night in kyoto by AVBE</p>
-    <audio autoplay="true" id="player" src="/Itsamesamir.github.io/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"></audio>
+    <audio autoplay="true" id="player" src="/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"></audio>
   <div class="musicButtons">
     <button class="musicButtons" value="backwards" onclick="songToggle(this)"><i
         class="fa-solid fa-backward-step fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
@@ -72,56 +72,56 @@
       if(season=="spring"||season=="autumn"){
         if(dayTime==1){
           
-          document.body.style.backgroundImage ="url('/Itsamesamir.github.io/images/autumnSunny.png')"
+          document.body.style.backgroundImage ="url('/images/autumnSunny.png')"
         }
         else{
-          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnEvening.png')"
+          document.body.style.backgroundImage = "url('/images/autumnEvening.png')"
         }
         
       }
       else if(season=="summer"){
         if(dayTime==1){
-          document.body.style.backgroundImage = "/Itsamesamir.github.io/images/summerSunny.png"
+          document.body.style.backgroundImage = "/images/summerSunny.png"
         }
         else{
-          document.body.style.backgroundImage = "/Itsamesamir.github.io/images/summerEvening.png"
+          document.body.style.backgroundImage = "/images/summerEvening.png"
         }
       }
       else{
         if(dayTime==1){
-          document.body.style.backgroundImage = "/Itsamesamir.github.io/images/winterSunny.png"
+          document.body.style.backgroundImage = "/images/winterSunny.png"
         }
         else{
-          document.body.style.backgroundImage = "/Itsamesamir.github.io/images/winterEvening.png"
+          document.body.style.backgroundImage = "/images/winterEvening.png"
         }
       }
     }
     else if(weatherCodes[1].includes(currentWeatherCode)){
       if(season=="spring"||season=="autumn"){
        
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/autumnRaining.png"
+        document.body.style.backgroundImage = "/images/autumnRaining.png"
       }
       else if(season=="summer"){
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/summerRaining.png"
+        document.body.style.backgroundImage = "/images/summerRaining.png"
       }
       else{
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/winterRaining.png"
+        document.body.style.backgroundImage = "/images/winterRaining.png"
       }
     }
     else if(weatherCodes[2].includes(currentWeatherCode)){
       if(season=="spring"||season=="autumn"){
         
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/autumnGloomy.png"
+        document.body.style.backgroundImage = "/images/autumnGloomy.png"
       }
       else if(season=="summer"){
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/summerGloomy.png"
+        document.body.style.backgroundImage = "/images/summerGloomy.png"
       }
       else{
-        document.body.style.backgroundImage = "/Itsamesamir.github.io/images/winterGloomy.png"
+        document.body.style.backgroundImage = "/images/winterGloomy.png"
       }
     }
     else{
-      document.body.style.backgroundImage = "/Itsamesamir.github.io/images/winterSnowing.png"
+      document.body.style.backgroundImage = "/images/winterSnowing.png"
     }
   }
 
@@ -157,15 +157,15 @@
     songText = document.getElementById("currentlyPlaying")
     if (songCounter % 3 == 1) {
       songText.innerHTML  = "Night in kyoto by AVBE"
-      song.src = "/Itsamesamir.github.io/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"
+      song.src = "/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"
     }
     else if (songCounter % 3 == 2) {
       songText.innerHTML  = "Early morning by Matrika"
-      song.src = "/Itsamesamir.github.io/music/early-morning-matrika-main-version-22092-02-25.mp3"
+      song.src = "/music/early-morning-matrika-main-version-22092-02-25.mp3"
     }
     else {
       songText.innerHTML  = "Satie by Oliver Massa"
-      song.src = "/Itsamesamir.github.io/music/satie-oliver-massa-main-version-13820-02-42.mp3"
+      song.src = "/music/satie-oliver-massa-main-version-13820-02-42.mp3"
     }
 
   }
