@@ -1,0 +1,18 @@
+body {
+    background-image: url("/Itsamesamir.github.io/images/summerEvening.png");
+    background-color: #cccccc;
+    background-size: 100% 100%;
+   }
+.music{
+    position:fixed;
+    bottom: 20px;
+    right:20px;
+}
+.musicButtons{
+    background-color: transparent;
+    border: none;
+
+}
+.music p{
+    color: whitesmoke;
+}
