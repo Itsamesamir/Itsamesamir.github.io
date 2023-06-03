@@ -1,18 +1,222 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
 body {
-    background-image: url("/Itsamesamir.github.io/images/summerEvening.png");
-    background-color: #cccccc;
+    font-family: 'Roboto Mono', monospace;
+    color: #E3DFD1;
     background-size: 100% 100%;
    }
 .music{
     position:fixed;
     bottom: 20px;
     right:20px;
+    min-width: 250px;
+}
+.musicButtonsDiv{
+    display: flex;
+    justify-content: center;
 }
 .musicButtons{
     background-color: transparent;
     border: none;
+    padding: 15px;
 
 }
-.music p{
-    color: whitesmoke;
+.textDiv{
+    position: relative;
+    top:50vh;
+    margin-left: 20px;
+}
+.music p, .weather p, .textDiv h1{
+    color: #E3DFD1;
+    
+}
+
+.textDiv h1{
+    font-size: 60px;
+    
+}
+.weather{
+    position:absolute;
+    top: 20px;
+    right:20px;
+}
+.gradientText{
+    background: linear-gradient(
+        to right,
+        #F38074 20%,
+        #FF8500 30%,
+        #ae388b 70%,
+        #a3b3ee 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.mainContainer>div {
+    height: 100vh;
+    display: flex;
+    scroll-snap-align: start;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior:smooth;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+html::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+.carousel{
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+.dot {
+    height: 2.4vh;
+    width: 2.4vh;
+    background-color:transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 4px;
+    border: 2px solid #d59b7c; 
+}
+.aboutMeSection{
+    width: 100%;
+    background-size: 400% 400%;
+    background-image: linear-gradient(-45deg,#a73737,#d53369,#4ca1af, #904e95);
+    animation: gradient 15s ease infinite;
+    
+}
+.myWorkSection{
+    width: 100%;   
+    background-size: 400% 400%;
+    background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+	height: 100vh;
+    
+}
+.contactMeSection{
+    width: 100%;   
+    background-size: 400% 400%;
+    background-image: linear-gradient(180deg, #4568DC,#351c75,#ef629f,#a43931);
+    animation: gradient 15s ease infinite;
+    
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+  
+.aboutText{
+    width: 60%;
+    padding: 70px;
+    padding-top: 15vh;
+}
+img.rounded {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+.imageHolderDiv {
+    position:absolute;
+    padding: 50px;
+    right:10vh;
+  
+}
+/*credit for input fields: Nart->*/
+.inp {
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid #E3DFD1;
+    padding: 5px 10px;
+    outline: none;
+ }
+ input, select, textarea{
+    color: #E3DFD1;
+}
+ textarea:focus, input:focus{
+    color: #E3DFD1;
+ }
+[placeholder]:focus::-webkit-input-placeholder{
+    transition: text-indent 0.3s 0.3s ease; 
+    text-indent: -100%;
+    opacity: 1;
+    color: #E3DFD1;
+ }
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #E3DFD1;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #E3DFD1;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #E3DFD1;
+  }
+
+.contactForm{
+    padding-left: 50px;
+}
+
+
+.submit {
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #d59b7c;
+    overflow: hidden;
+    border-radius: 30px;
+    font-family: 'Roboto Mono', monospace;
+    color: #E3DFD1;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .contactMeSection{
+    align-items: center;
+  }
+
+  .links {
+    list-style-type: none;
+    font-size: x-large;
+  
+}
+.links>li{
+ padding: 10px;
+}
+a{
+    color: #E3DFD1;
+    text-decoration: none;
 }

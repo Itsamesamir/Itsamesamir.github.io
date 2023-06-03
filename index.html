@@ -1,58 +1,207 @@
-<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+<link rel="stylesheet" type="text/css" href="/Itsamesamir.github.io/styles/style.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <html>
+<title>Ahamed Samir Sarker &#128526;</title>
+<link rel="shortcut icon" type="image/x-icon" href="/Itsamesamir.github.io/images/favicon.ico">
 
-<section name="musicAutoplayer">
-  <div class="music">
-    <p>Currently playing:<br></p>
-    <p id="currentlyPlaying">Night in kyoto by AVBE</p>
-    <audio autoplay="true" id="player" src="/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"></audio>
-  <div class="musicButtons">
-    <button class="musicButtons" value="backwards" onclick="songToggle(this)"><i
-        class="fa-solid fa-backward-step fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
-    <button class="musicButtons" id="playButton"value="play" onclick="songStatus(this)"><i class="fa-solid fa-play fa-beat-fade fa-2xl"
-        style="color: #d59b7c;"></i></button>
-    <button class="musicButtons" value="forwards" onclick="songToggle(this)"><i
-        class="fa-solid fa-forward-step fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
+<div class="mainContainer">
+  <div id="firstSection" class="firstSection">
+    <section name="musicAutoplayer">
+      <div class="music">
+        <p>Currently playing:<br></p>
+        <p id="currentlyPlaying">Night in kyoto by AVBE</p>
+        <audio autoplay="true" id="player"
+          src="/Itsamesamir.github.io/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"></audio>
+        <div class="musicButtonsDiv">
+          <button class="musicButtons" value="backwards" onclick="songToggle(this)"><i
+              class="fa-solid fa-backward-step fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
+          <button class="musicButtons" id="playButton" value="play" onclick="songStatus(this)"><i
+              class="fa-solid fa-play fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
+          <button class="musicButtons" value="forwards" onclick="songToggle(this)"><i
+              class="fa-solid fa-forward-step fa-beat-fade fa-2xl" style="color: #d59b7c;"></i></button>
+        </div>
+      </div>
+    </section>
+    <section name="weatherSection">
+      <div class="weather">
+        <p>London</p>
+        <div id="symbol">
+
+        </div>
+        <p id="temperature"></p>
+
+      </div>
+    </section>
+    <section name="InitialTexts">
+      <div class="textDiv">
+        <h1>Hi,</h1>
+        <h1>I'm <span class="gradientText">Samir,</span></h1>
+        <h1>Welcome to my <span class="gradientText">website.</span></h1>
+      </div>
+
+    </section>
+    <section name="carouselSection">
+      <div class="carousel">
+        <a href="#firstSection"><span id="dot1"class="dot" style="background-color: #d59b7c;" onclick="carouselColorChange(this)"></span></a><br>
+        <a href="#aboutMeSection"><span id="dot2" class="dot" onclick="carouselColorChange(this)"></span></a><br>
+        <a href="#myWorkSection"><span id ="dot3" class="dot" onclick="carouselColorChange(this)"></span></a><br>
+        <a href="#contactMeSection"><span id="dot4" class="dot" onclick="carouselColorChange(this)"></span></a><br>
+      </div>
+    </section>
   </div>
+  <div id="aboutMeSection" class="aboutMeSection">
+    <div data-aos="fade-in" data-aos-delay="180" class="aboutText">
+      <h1>About Me</h1>
+      <p>
+        Welcome to my portfolio website! I'm Ahamed Samir Sarker, a computer science university student with a strong passion
+        for web development. My goal is to combine my technical skills with creative design to build innovative and
+        user-friendly websites.<br><br>
+        Throughout my academic journey, I have gained a solid foundation in programming languages like HTML, CSS,
+        JavaScript, and more. I have successfully completed various projects, both individually and as part of a team,
+        which have enhanced my problem-solving abilities and attention to detail.<br><br>
+        I strive to create seamless and visually appealing web experiences that engage, inform, and inspire visitors. By
+        leveraging my skills and knowledge, I aim to develop websites that meet functional requirements and provide
+        exceptional user experiences. Continuous learning is essential to me, and I actively seek out opportunities to
+        stay up-to-date with the latest technologies and industry trends.<br><br>
+      </p>
+    </div>
+    <div class="imageHolderDiv">
+      <div data-aos="fade-in" data-aos-delay="150" class="aboutImage">
+        <img src="/Itsamesamir.github.io/images/aboutMeCartoon.png" onmouseover="imageHover(this);"
+          onmouseout="imageUnhover(this);" class="rounded" alt="How I would look like as a sketch">
+
+      </div>
+    </div>
+
+
   </div>
-</section>
+  <div id="myWorkSection"" class=" myWorkSection">
+    <h1>Some Projects I worked on...</h1>
+  </div>
+  <div id="contactMeSection" class="contactMeSection">
+    <div data-aos="fade-in" data-aos-delay="150" style="width: 40%; float:left" class="contactForm">
+      <h1>Contact Me</h1>
+      <form action="https://formsubmit.co/ahamedsamirsarker@gmail.com" method="POST" />
+      <label for="name">Name:</label>
+      <input class="inp" placeholder="Your name &#128663;" type="text" id="name" name="name" required><br><br>
+      <label for="email">Email:</label>
+      <input class="inp" placeholder="Your email &#128690;" type="email" id="email" name="email" required><br><br>
+      <label for="message">Message:</label>
+      <textarea class="inp" type="text" id="message" name="message" rows="5" cols="30" required></textarea><br><br>
+      <button class="submit type1" type="submit">Send</button>
+      </form>
+    </div>
+    <div data-aos="fade-in" data-aos-delay="150" style="width: 60%; float:left" class="usefulLinks">
+      <h1>Some useful links...</h1>
+      <ul class="links">
+        <li>
+          <a href="https://github.com/Itsamesamir"><i class="fa-brands fa-github fa-beat-fade fa-lg"
+              style="color: #d59b7c;"></i> Github</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/samir-sarker-48407819b/"><i
+              class="fa-brands fa-linkedin fa-beat-fade fa-lg" style="color: #d59b7c;"></i> Linkedin</a>
+        </li>
+        
+        <li>
+
+          <a href="https://discordapp.com/users/651582615639293982"><i class="fa-brands fa-discord fa-beat-fade fa-lg"
+              style="color: #d59b7c;"></i> Discord</a>
+        </li>
+      
+      </ul>
+    </div>
+
+  </div>
+</div>
+
 
 </html>
 
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
 <script>
+  AOS.init();
   var songCounter = 1
+  oldDot = "dot1"
+  let firstSection = document.getElementById("firstSection")
+  let aboutMeElement = document.getElementById("aboutMeSection")
+  let myWorkSection = document.getElementById("myWorkSection")
+  let contactMeSection = document.getElementById("contactMeSection")
+  window.onscroll = function() {
+    if(checkVisible(firstSection)){
+      document.getElementById(oldDot).style.backgroundColor="transparent"
+      document.getElementById("dot1").style.backgroundColor="#d59b7c"
+      oldDot = "dot1"
+    }
+    if(checkVisible(aboutMeElement)){
+      document.getElementById(oldDot).style.backgroundColor="transparent"
+      document.getElementById("dot2").style.backgroundColor="#d59b7c"
+      oldDot = "dot2"
+      console.log("here")
+    }
+    if(checkVisible(myWorkSection)){
+      document.getElementById(oldDot).style.backgroundColor="transparent"
+      document.getElementById("dot3").style.backgroundColor="#d59b7c"
+      oldDot = "dot3"
+    }
+    if(checkVisible(contactMeSection)){
+      document.getElementById(oldDot).style.backgroundColor="transparent"
+      document.getElementById("dot4").style.backgroundColor="#d59b7c"
+      oldDot = "dot4"
+    }
+  }
 
-  function getSeason(){
+  function checkVisible(elm) {
+  var rect = elm.getBoundingClientRect();
+  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+ }
+
+  function carouselColorChange(selectedDot){
+    document.getElementById(oldDot).style.backgroundColor="transparent"
+    document.getElementById(selectedDot.id).style.backgroundColor="#d59b7c"
+    oldDot = selectedDot.id
+  }
+
+  function imageHover(image) {
+    image.setAttribute('src', '/Itsamesamir.github.io/images/aboutMePic.png');
+  }
+  function imageUnhover(image) {
+    image.setAttribute('src', '/Itsamesamir.github.io/images/aboutMeCartoon.png');
+  }
+  function getSeason() {
     var date = new Date();
     var month = date.getMonth()
-    const months = [[12 , 1 , 2], [3 , 4 , 5],
-             [6 , 7 , 8], [9 , 10 , 11]]
+    const months = [[12, 1, 2], [3, 4, 5],
+    [6, 7, 8], [9, 10, 11]]
 
-    if(months[0].includes(month)){
+    if (months[0].includes(month)) {
       return "winter"
     }
-    else if(months[1].includes(month)){
+    else if (months[1].includes(month)) {
       return "spring"
     }
-    else if(months[2].includes(month)){
+    else if (months[2].includes(month)) {
       return "summer"
     }
-    else{
+    else {
       return "autumn"
     }
   }
-  
-  
+
+
   async function getWeather() {
-    
+
     APIURL = "https://api.open-meteo.com/v1/forecast?latitude=51.53&longitude=0.11&hourly=temperature_2m,rain,cloudcover&current_weather=true&forecast_days=1";
     const response = await fetch(APIURL);
     const weatherObj = await response.json();
-    
+
     return weatherObj
 
   }
@@ -62,84 +211,101 @@
     var season = getSeason()
     var weather = await getWeather()
     var currentWeatherCode = weather.current_weather.weathercode
-    
-    console.log(season)
+    console.log(currentWeatherCode)
+    //get the current temp in degrees
+    var currentTemp = weather.current_weather.temperature
+    tempDiv = document.getElementById("temperature")
+    tempDiv.innerHTML = currentTemp + "C°"
+
+    //get weathersymbol div
+    weatherDiv = document.getElementById("symbol")
+
     //1=daylight,0=night
     var dayTime = weather.current_weather.is_day
     //lists code ->clear, rain, cloudy/gloomy,snow
-    var weatherCodes = [[0,1,2],[51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99],[3,45,48],[71,73,75,77,85,86]]
-    if(weatherCodes[0].includes(currentWeatherCode)){
-      if(season=="spring"||season=="autumn"){
-        if(dayTime==1){
-          
-          document.body.style.backgroundImage ="url('/images/autumnSunny.png')"
-        }
-        else{
-          document.body.style.backgroundImage = "url('/images/autumnEvening.png')"
-        }
-        
+    var weatherCodes = [[0, 1, 2], [51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99], [3, 45, 48], [71, 73, 75, 77, 85, 86]]
+
+    if (weatherCodes[0].includes(currentWeatherCode)) {
+      if (dayTime == 1) {
+        weatherDiv.innerHTML = "<i class='fa-solid fa-sun fa-2xl' style='color: #d59b7c;'></i>"
       }
-      else if(season=="summer"){
-        if(dayTime==1){
-          document.body.style.backgroundImage = "/images/summerSunny.png"
+      else {
+        weatherDiv.innerHTML = "<i class='fa-solid fa-moon fa-2xl' style='color: #d59b7c;'></i>"
+      }
+      if (season == "spring" || season == "autumn") {
+        if (dayTime == 1) {
+
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnSunny.png')"
         }
-        else{
-          document.body.style.backgroundImage = "/images/summerEvening.png"
+        else {
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnEvening.png')"
+        }
+
+      }
+      else if (season == "summer") {
+        if (dayTime == 1) {
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/summerSunny.png)'"
+        }
+        else {
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/summerEvening.png')"
         }
       }
-      else{
-        if(dayTime==1){
-          document.body.style.backgroundImage = "/images/winterSunny.png"
+      else {
+        if (dayTime == 1) {
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/winterSunny.png')"
         }
-        else{
-          document.body.style.backgroundImage = "/images/winterEvening.png"
+        else {
+          document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/winterEvening.png')"
         }
       }
     }
-    else if(weatherCodes[1].includes(currentWeatherCode)){
-      if(season=="spring"||season=="autumn"){
-       
-        document.body.style.backgroundImage = "/images/autumnRaining.png"
+    else if (weatherCodes[1].includes(currentWeatherCode)) {
+      weatherDiv.innerHTML = "<i class='fa-solid fa-cloud-rain fa-2xl' style='color: #d59b7c;'></i>"
+      if (season == "spring" || season == "autumn") {
+
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnRaining.png')"
       }
-      else if(season=="summer"){
-        document.body.style.backgroundImage = "/images/summerRaining.png"
+      else if (season == "summer") {
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/summerRaining.png')"
       }
-      else{
-        document.body.style.backgroundImage = "/images/winterRaining.png"
-      }
-    }
-    else if(weatherCodes[2].includes(currentWeatherCode)){
-      if(season=="spring"||season=="autumn"){
-        
-        document.body.style.backgroundImage = "/images/autumnGloomy.png"
-      }
-      else if(season=="summer"){
-        document.body.style.backgroundImage = "/images/summerGloomy.png"
-      }
-      else{
-        document.body.style.backgroundImage = "/images/winterGloomy.png"
+      else {
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/winterRaining.png')"
       }
     }
-    else{
-      document.body.style.backgroundImage = "/images/winterSnowing.png"
+    else if (weatherCodes[2].includes(currentWeatherCode)) {
+      weatherDiv.innerHTML = "<i class='fa-solid fa-cloud fa-2xl' style='color: #d59b7c;'></i>"
+      if (season == "spring" || season == "autumn") {
+        console.log("here")
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnGloomy.png')"
+      }
+      else if (season == "summer") {
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/summerGloomy.png')"
+      }
+      else {
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/winterGloomy.png')"
+      }
+    }
+    else {
+      weatherDiv.innerHTML = "<i class='fa-solid fa-snowflake fa-2xl' style='color: #d59b7c;'></i>"
+      document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/winterSnowing.png')"
     }
   }
 
 
   function songStatus(button) {
-    
-    if(button.value=="play"){
-      button.value="pause"
+
+    if (button.value == "play") {
+      button.value = "pause"
       document.getElementById('player').pause()
     }
-    else{
-      button.value="play"
+    else {
+      button.value = "play"
       document.getElementById('player').play()
     }
-    
+
   }
- 
-  
+
+
   function songToggle(toggle) {
     //sets values for the songs
     if (toggle.value == "backwards" && songCounter == 1) {
@@ -156,16 +322,16 @@
     song = document.getElementById("player")
     songText = document.getElementById("currentlyPlaying")
     if (songCounter % 3 == 1) {
-      songText.innerHTML  = "Night in kyoto by AVBE"
-      song.src = "/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"
+      songText.innerHTML = "Night in kyoto by AVBE"
+      song.src = "/Itsamesamir.github.io/music/night-in-kyoto-avbe-main-version-21302-01-57.mp3"
     }
     else if (songCounter % 3 == 2) {
-      songText.innerHTML  = "Early morning by Matrika"
-      song.src = "/music/early-morning-matrika-main-version-22092-02-25.mp3"
+      songText.innerHTML = "Early morning by Matrika"
+      song.src = "/Itsamesamir.github.io/music/early-morning-matrika-main-version-22092-02-25.mp3"
     }
     else {
-      songText.innerHTML  = "Satie by Oliver Massa"
-      song.src = "/music/satie-oliver-massa-main-version-13820-02-42.mp3"
+      songText.innerHTML = "Satie by Oliver Massa"
+      song.src = "/Itsamesamir.github.io/music/satie-oliver-massa-main-version-13820-02-42.mp3"
     }
 
   }
