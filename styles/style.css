@@ -10,9 +10,12 @@ body {
    }
 .music{
     position:fixed;
-    bottom: 20px;
-    right:20px;
-    min-width: 250px;
+    bottom: 3vh;
+    right: 3vh;
+    min-width: 28vh;
+}
+.music p{
+    font-size: 2vh;
 }
 .musicButtonsDiv{
     display: flex;
@@ -21,13 +24,13 @@ body {
 .musicButtons{
     background-color: transparent;
     border: none;
-    padding: 15px;
+    padding: 2vh;
 
 }
 .textDiv{
     position: relative;
     top:50vh;
-    margin-left: 20px;
+    margin-left: 6vh;
 }
 .music p, .weather p, .textDiv h1{
     color: #E3DFD1;
@@ -35,13 +38,13 @@ body {
 }
 
 .textDiv h1{
-    font-size: 60px;
+    font-size: 7vh;
     
 }
 .weather{
     position:absolute;
-    top: 20px;
-    right:20px;
+    top: 3vh;
+    right: 3vh;
 }
 .gradientText{
     background: linear-gradient(
@@ -88,7 +91,7 @@ html::-webkit-scrollbar {
     margin: 0;
     position: fixed;
     top: 50%;
-    right: 30px;
+    right: 3vh;
     transform: translateY(-50%);
 }
 .dot {
@@ -122,6 +125,11 @@ html::-webkit-scrollbar {
     animation: gradient 15s ease infinite;
     
 }
+
+.workHeading{
+    top: 8vh;
+    padding: 8vh;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -136,18 +144,21 @@ html::-webkit-scrollbar {
   
 .aboutText{
     width: 60%;
-    padding: 70px;
+    padding: 7vh;
     padding-top: 15vh;
+}
+.aboutText p {
+    font-size: 2vh;
 }
 img.rounded {
     object-fit: cover;
     border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    height: 40vh;
+    width: 40vh;
 }
 .imageHolderDiv {
     position:absolute;
-    padding: 50px;
+    padding: 4vh;
     right:10vh;
   
 }
@@ -156,7 +167,7 @@ img.rounded {
     background: transparent;
     border:none;
     border-bottom: 1px solid #E3DFD1;
-    padding: 5px 10px;
+    padding: 1vh 2vh;
     outline: none;
  }
  input, select, textarea{
@@ -185,20 +196,20 @@ img.rounded {
   }
 
 .contactForm{
-    padding-left: 50px;
+    padding-left: 5vh;
 }
 
 
 .submit {
-    height: 50px;
-    width: 100px;
+    height: 7vh;
+    width: 12vh;
     font-size: large;
     position: relative;
     background-color: transparent;
     cursor: pointer;
     border: 2px solid #d59b7c;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 2vh;
     font-family: 'Roboto Mono', monospace;
     color: #E3DFD1;
     transition: all 0.5s ease-in-out;
@@ -214,9 +225,18 @@ img.rounded {
   
 }
 .links>li{
- padding: 10px;
+ padding: 2vh;
 }
 a{
     color: #E3DFD1;
     text-decoration: none;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: #fff url('/Itsamesamir.github.io/images/loading.gif') no-repeat center center;
 }
