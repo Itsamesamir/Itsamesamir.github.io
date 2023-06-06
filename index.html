@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
@@ -13,9 +13,24 @@
 <div id="loader">
   
 </div>
+
 <div class="mainContainer">
- 
+  
   <div id="firstSection" class="firstSection">
+    <div class="mainNav">
+      <div class="navLink">
+        <a href="#aboutMeSection">About</a>
+      </div>
+      <div  class="navLink">
+        <a href="#myWorkSection">Works</a>
+      </div>
+      <div  class="navLink">
+        <a href="#contactMeSection">Contact</a><br>
+      </div>
+    </div>
+    
+   
+
     <section name="musicAutoplayer">
       <div class="music">
         <p>Currently playing:<br></p>
@@ -44,9 +59,9 @@
     </section>
     <section name="InitialTexts">
       <div class="textDiv">
-        <h1>Hi,</h1>
-        <h1>I'm <span class="gradientText">Samir,</span></h1>
-        <h1>Welcome to my <span class="gradientText">website.</span></h1>
+        <h1><span class="landingText">Hi,</span></h1>
+        <h1><span class="landingText">I'm</span> <span class="gradientText">Samir,</span></h1>
+        <h1><span class="landingText">Welcome to my</span> <span class="gradientText">website.</span></h1>
       </div>
 
     </section>
@@ -284,8 +299,11 @@
     }
     else if (weatherCodes[2].includes(currentWeatherCode)) {
       weatherDiv.innerHTML = "<i class='fa-solid fa-cloud fa-2xl' style='color: #d59b7c;'></i>"
-      if (season == "spring" || season == "autumn") {
-        console.log("here")
+      if(dayTime!=1){
+        document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnEvening.png')"
+      } 
+      else if (season == "spring" || season == "autumn") {
+      
         document.body.style.backgroundImage = "url('/Itsamesamir.github.io/images/autumnGloomy.png')"
       }
       else if (season == "summer") {

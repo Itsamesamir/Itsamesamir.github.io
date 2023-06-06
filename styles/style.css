@@ -8,6 +8,30 @@ body {
     color: #E3DFD1;
     background-size: 100% 100%;
    }
+
+.mainNav{
+    position: fixed;
+    top: 2vh;
+    left: 5vh;
+}
+.navLink{
+    float: left;
+    padding-right: 2vh;
+    text-decoration: none;
+}
+.navLink:after{
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+.navLink:hover:after{
+    width: 100%;
+    background: #E3DFD1;
+}
 .music{
     position:fixed;
     bottom: 3vh;
@@ -32,6 +56,9 @@ body {
     top:50vh;
     margin-left: 6vh;
 }
+.landingText, .navLink a{
+    text-shadow:1px 2px black;
+}
 .music p, .weather p, .textDiv h1{
     color: #E3DFD1;
     
@@ -43,10 +70,11 @@ body {
 }
 .weather{
     position:absolute;
-    top: 3vh;
+    
     right: 3vh;
 }
 .gradientText{
+    
     background: linear-gradient(
         to right,
         #F38074 20%,
@@ -240,3 +268,4 @@ a{
     overflow: visible;
     background: #fff url('/Itsamesamir.github.io/images/loading.gif') no-repeat center center;
 }
+
