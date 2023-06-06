@@ -36,7 +36,7 @@ body {
     position:fixed;
     bottom: 3vh;
     right: 3vh;
-    min-width: 28vh;
+    min-width: 30vh;
 }
 .music p{
     font-size: 2vh;
@@ -134,15 +134,15 @@ html::-webkit-scrollbar {
 .aboutMeSection{
     width: 100%;
     background-size: 400% 400%;
-    background-image: linear-gradient(-45deg,#a73737,#d53369,#4ca1af, #904e95);
+    background-image: linear-gradient(-45deg,#a73737,#b4a7d6,#4ca1af, #904e95);
     animation: gradient 15s ease infinite;
     
 }
 .myWorkSection{
     width: 100%;   
     background-size: 400% 400%;
-    background-image: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    animation: gradient 15s ease infinite;
+    background-image: linear-gradient(45deg, #fad5e5, #632b58, #23a6d5, #23d5ab);
+    animation: gradient 20s ease infinite;
 	height: 100vh;
     
 }
@@ -269,3 +269,24 @@ a{
     background: #fff url('/Itsamesamir.github.io/images/loading.gif') no-repeat center center;
 }
 
+.projectHand{
+    max-width: 50vh;
+}
+.pills:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
