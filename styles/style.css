@@ -26,7 +26,7 @@ body {
   height: 3px;
   width: 0px;
   background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+  transition: width .3s ease, background-color .5s ease;
 }
 .navLink:hover:after{
     width: 100%;
@@ -35,7 +35,7 @@ body {
 .music{
     position:fixed;
     bottom: 3vh;
-    right: 3vh;
+    right: 0.5vh;
     min-width: 30vh;
 }
 .music p{
@@ -134,14 +134,14 @@ html::-webkit-scrollbar {
 .aboutMeSection{
     width: 100%;
     background-size: 400% 400%;
-    background-image: linear-gradient(-45deg,#a73737,#b4a7d6,#4ca1af, #904e95);
+    background-image: linear-gradient(-45deg,#78176e,#a63e94,#e94380, #d79088);
     animation: gradient 15s ease infinite;
     
 }
 .myWorkSection{
     width: 100%;   
     background-size: 400% 400%;
-    background-image: linear-gradient(45deg, #fad5e5, #632b58, #23a6d5, #23d5ab);
+    background-image: linear-gradient(45deg, #4158D0,#C850C0,#78176e);
     animation: gradient 20s ease infinite;
 	height: 100vh;
     
@@ -154,7 +154,7 @@ html::-webkit-scrollbar {
     
 }
 
-.workHeading{
+.worksContainer{
     top: 8vh;
     padding: 8vh;
 }
@@ -243,11 +243,14 @@ img.rounded {
     transition: all 0.5s ease-in-out;
   }
   
-  .contactMeSection{
+.submit:hover{
+    color: #d59b7c;
+}
+.contactMeSection{
     align-items: center;
   }
 
-  .links {
+.links {
     list-style-type: none;
     font-size: x-large;
   
@@ -258,6 +261,10 @@ img.rounded {
 a{
     color: #E3DFD1;
     text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+a:hover{
+    color: #d59b7c;
 }
 
 #loader {
@@ -266,27 +273,23 @@ a{
     height: 100vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('/Itsamesamir.github.io/images/loading.gif') no-repeat center center;
+    background: #fff url('/Itsamesamir.github.io/images/loading.gif');
+    background-repeat: no-repeat;
+    background-size:cover;
 }
-
-.projectHand{
-    max-width: 50vh;
+.projects{
+    width:85%;
+    padding-bottom:2vh;
 }
-.pills:hover{
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
+.ProjectLanguage{
+    border: 2px solid #d59b7c;
+    border-radius: 5px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out;
 }
-
-@keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+.ProjectLanguage:hover{
+    color: #d59b7c;
+}
+.projects p{
+    font-size:smaller;
+}
