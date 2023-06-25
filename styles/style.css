@@ -8,7 +8,11 @@ body {
     font-family: 'Roboto Mono', monospace;
     color: #E3DFD1;
     background-size: 100% 100%;
-   
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    -webkit-background-size: cover;
+    background-size: cover;
    }
 
 .mainNav{
@@ -276,7 +280,7 @@ a:hover{
     height: 100vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('/images/loading.gif');
+    background: #fff url('/Itsamesamir.github.io/images/loading.gif');
     background-repeat: no-repeat;
     background-size:cover;
 }
