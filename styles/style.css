@@ -325,7 +325,9 @@ a:hover{
         padding: 2vh;
         right: 2vh;
     }
-   
+    .cvLink{
+        color:#d59b7c;
+    }
     .projects p, .ProjectLanguage {
         font-size: 2vh;
     }
