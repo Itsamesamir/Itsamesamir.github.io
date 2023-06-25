@@ -280,7 +280,7 @@ a:hover{
     height: 100vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('/Itsamesamir.github.io/images/loading.gif');
+    background: #fff url('/images/loading.gif');
     background-repeat: no-repeat;
     background-size:cover;
 }
