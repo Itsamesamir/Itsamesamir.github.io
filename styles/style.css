@@ -1,4 +1,4 @@
-html, body {
+html{
     height: 100%;
     margin: 0;
     padding: 0;
@@ -7,12 +7,9 @@ body {
     
     font-family: 'Roboto Mono', monospace;
     color: #E3DFD1;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    -webkit-background-size: cover;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+
    }
 
 .mainNav{
@@ -137,6 +134,16 @@ html::-webkit-scrollbar {
     display: inline-block;
     margin-bottom: 4px;
     border: 2px solid #d59b7c; 
+}
+
+.firstSection{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    -webkit-background-size: cover;
+    background-size: cover;
+    
 }
 .aboutMeSection{
     width: 100%;
@@ -280,7 +287,7 @@ a:hover{
     height: 100vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('/images/loading.gif');
+    background: #fff url('firstPart/images/loading.gif');
     background-repeat: no-repeat;
     background-size:cover;
 }
