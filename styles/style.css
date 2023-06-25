@@ -4,9 +4,11 @@ html, body {
     padding: 0;
   }
 body {
+    
     font-family: 'Roboto Mono', monospace;
     color: #E3DFD1;
     background-size: 100% 100%;
+   
    }
 
 .mainNav{
@@ -274,7 +276,7 @@ a:hover{
     height: 100vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('/Itsamesamir.github.io/images/loading.gif');
+    background: #fff url('/images/loading.gif');
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -297,9 +299,10 @@ a:hover{
 }
 
 @media only screen and (max-width: 1200px) {
-    .landingText, .gradientText{
+    .textDiv h1{
         font-size: 4vh;
-        
+       
+        margin-bottom: 2vh;
     }
    
     img.rounded {
@@ -315,10 +318,13 @@ a:hover{
     .projects p, .ProjectLanguage {
         font-size: 2vh;
     }
-    .myWorkSection h2{
+    .myWorkSection h2, .contactMeSection h2{
         font-size: 4vh;
     }
-    .projects h3{
+    .projects h3, .contactMeSection h3{
+        font-size: 3vh;
+    }
+    .contactMeSection a {
         font-size: 3vh;
     }
     .submit{
