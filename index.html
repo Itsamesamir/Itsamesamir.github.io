@@ -279,7 +279,7 @@
 
   async function setWallpaper() {
     var season = getSeason()
-    console.log(season);
+    
     var weather = await getWeather()
     var currentWeatherCode = weather.current_weather.weathercode
 
@@ -316,7 +316,8 @@
       }
       else if (season == "summer") {
         if (dayTime == 1) {
-          firstPart.style.backgroundImage = "url('/images/summerSunny.png)'"
+          firstPart.style.backgroundImage = "url('/images/summerSunny.png')"
+          console.log("asd")
         }
         else {
           firstPart.style.backgroundImage = "url('/images/summerEvening.png')"
